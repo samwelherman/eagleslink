@@ -63,7 +63,7 @@ if(isset($_POST['form1'])) {
 
 <div class="login-box">
 	<div class="login-logo">
-		<b>Admin Panel</b>
+		
 	</div>
   	<div class="login-box-body">
     	<p class="login-box-msg">Log in to start your session</p>

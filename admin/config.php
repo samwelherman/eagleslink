@@ -10,15 +10,16 @@ date_default_timezone_set('Asia/Dhaka');
 $dbhost = 'localhost';
 
 // Database Name
-$dbname = 'admin_projecto_site';
+//$dbname = 'admin_projecto_site';
+$dbname = 'admin_eagleslink';
 
 // Database Username
-//$dbuser = 'admin_akilicodes';
-$dbuser = 'root';
+$dbuser = 'admin_website';
+//$dbuser = 'root';
 
 // Database Password
-//$dbpass = 'Main**2014_';
-$dbpass = '';
+$dbpass = 'Rfp1qkrkzkWxYqoeEU';
+//$dbpass = '';
 
 try {
 	$pdo = new PDO("mysql:host={$dbhost};dbname={$dbname}", $dbuser, $dbpass);

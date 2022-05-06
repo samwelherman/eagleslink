@@ -34,6 +34,10 @@ $total_attorney = $statement->rowCount();
 <section class="content">
 
   <div class="row">
+  <?php 
+						if($_SESSION['user']['role'] != 'Agent' 
+					      || $_SESSION['user']['role'] != 'Agent'):
+					?>
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="info-box">
         <span class="info-box-icon bg-aqua"><i class="fa fa-user-plus"></i></span>
@@ -91,6 +95,8 @@ $total_attorney = $statement->rowCount();
         </div>
       </div>
     </div>
+
+    <?php endif; ?>
   </div>
 
 

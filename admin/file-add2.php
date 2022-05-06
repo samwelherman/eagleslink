@@ -51,7 +51,7 @@ if(isset($_POST['form1'])) {
 		<h1>Add File</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="file.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="upload-file.php" class="btn btn-primary btn-sm">View All</a>
 	</div>
 </section>
 

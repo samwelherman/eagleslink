@@ -70,7 +70,7 @@ if($_SESSION['user']['role']=='Publisher') {
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lawyer - Admin Panel</title>
+	<title><?php echo $_SESSION['user']['role'] ?> - Admin Panel</title>
 
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -98,7 +98,7 @@ if($_SESSION['user']['role']=='Publisher') {
 		<header class="main-header">
 
 			<a href="index.php" class="logo">
-				<span class="logo-lg">Lawyer</span>
+				<span class="logo-lg"><?php echo $_SESSION['user']['role'] ?> </span>
 			</a>
 
 			<nav class="navbar navbar-static-top">
@@ -292,6 +292,11 @@ if($_SESSION['user']['role']=='Publisher') {
 			            <i class="fa fa-th-large"></i> <span>File Upload (Media)</span>
 			          </a>
 			        </li>
+					<li class="treeview <?php if( ($cur_page == 'dowload-file.php') ) {echo 'active';} ?>">
+			          <a href="dowload-file.php">
+			            <i class="fa fa-th-large"></i> <span>Download Contract</span>
+			          </a>
+			        </li>
 
     		        <li class="treeview <?php if( ($cur_page == 'social-media.php') ) {echo 'active';} ?>">
 			          <a href="social-media.php">
@@ -300,8 +305,25 @@ if($_SESSION['user']['role']=='Publisher') {
 			        </li>
 			        
 			        <?php endif; ?>
+					<?php 
+						if($_SESSION['user']['role'] == 'Agent' 
+					      || $_SESSION['user']['role'] == 'Agent'):
+					?>
+                     <li class="treeview <?php if( ($cur_page == 'dowload-file.php') ) {echo 'active';} ?>">
+			          <a href="dowload-file.php">
+			            <i class="fa fa-th-large"></i> <span>Download Contract</span>
+			          </a>
+			        </li>
 
+					<li class="treeview <?php if( ($cur_page == 'upload-file.php') ) {echo 'active';} ?>">
+			          <a href="upload-file.php">
+			            <i class="fa fa-th-large"></i> <span>Upload Contract</span>
+			          </a>
+			        </li>
 
+					<?php endif; ?>
+
+              
 			        <li class="treeview">
 			          <a href="logout.php">
 			            <i class="fa fa-sign-out"></i> <span>Logout</span>
